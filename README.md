@@ -1,5 +1,4 @@
-# DLMDSPWP01_Python_Assignment
-# Automated Selection of Ideal Functions
+# DLMDSPWP01_Python_Assignment: Automated Selection of Ideal Functions
 
 **Author:** Anton Scholz  
 **Matriculation Number:** IU14162303  
