@@ -1,11 +1,10 @@
-%%writefile src/database_manager.py
 """
 Database Management Module
 Handles SQLite database creation and data persistence using SQLAlchemy.
 """
 
 import pandas as pd
-from sqlalchemy import create_url, create_engine, Column, Float, Integer, MetaData, Table
+from sqlalchemy import create_engine, Column, Float, Integer, MetaData, Table
 from sqlalchemy.orm import declarative_base, sessionmaker
 from src.exceptions import FileNotFoundException
 
@@ -45,6 +44,18 @@ class DatabaseManager:
         except Exception as e:
             print(f"An unexpected error occurred while loading {file_path}: {e}")
 
+    def save_dataframe_to_table(self, df, table_name):
+        """
+        Saves a pandas DataFrame to a SQLite table.
+        :param df: The DataFrame to persist.
+        :param table_name: The target table name.
+        """
+        try:
+            df.to_sql(table_name, self.engine, if_exists='replace', index=False)
+            print(f"Successfully saved results to table '{table_name}'.")
+        except Exception as e:
+            print(f"Error saving to table {table_name}: {e}")
+    
     def get_engine(self):
         """Returns the SQLAlchemy engine instance."""
         return self.engine
