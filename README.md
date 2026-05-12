@@ -5,8 +5,7 @@
 **Module:** Python Programming (DLMDSPWP01)
 
 ## Project Description
-This application automates the process of identifying the best-fitting mathematical models for training datasets from a pool of candidate "ideal" functions. The selection is based on minimizing the Sum of Squared Residuals (SSR). Once models are selected, test data is mapped to these functions using a strict statistical threshold ($max\_dev_{train} \times \sqrt{2}$).
-
+This application automates the process of identifying the best-fitting mathematical models for training datasets from a pool of candidate "ideal" functions. The selection is based on minimizing the Sum of Squared Residuals (SSR). Once models are selected, test data is mapped to these functions using a strict statistical threshold.
 ## Features
 - **Modular OOP Architecture:** Clean separation of data processing, database management, and visualization.
 - **Relational Persistence:** Utilizes SQLAlchemy and SQLite for structured data storage.
